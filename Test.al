@@ -1,16 +1,21 @@
 table 50000 MyTable
 {
     DataClassification = ToBeClassified;
-    
+
     fields
     {
-        field(1;MyField; Integer)
+        field(1; MyField; Integer)
         {
             DataClassification = ToBeClassified;
-            
+
+        }
+        field(2; MyField2; Integer)
+        {
+            DataClassification = ToBeClassified;
+
         }
     }
-    
+
     keys
     {
         key(PK; MyField)
@@ -18,28 +23,28 @@ table 50000 MyTable
             Clustered = true;
         }
     }
-    
+
     var
         myInt: Integer;
-    
+
     trigger OnInsert()
     begin
-        
+
     end;
-    
+
     trigger OnModify()
     begin
-        
+
     end;
-    
+
     trigger OnDelete()
     begin
-        
+
     end;
-    
+
     trigger OnRename()
     begin
-        
+
     end;
-    
+
 }
